@@ -1,9 +1,10 @@
-body{margin:0px;padding:0px;background:gray; font:15px  "微软雅黑";}
+    body{margin:0px;padding:0px;background:gray; font:15px  "微软雅黑";}
 	header{margin:0px 0px 10px 0px;background:#333333;height:100px;width:100%;}
 	header img{margin-top:20px; margin-left:50px;float:left;}
 	#nav{float:right;list-style-type: disc;}	
 	#nav li{display:inline-block;color:gray;margin-right: 20px;margin-top:30px;}
 	#nav li a {color:white;text-decoration: none;}
+	#nav li a:hover{color:gray;}
 	h3{color:gray;}
 	h5{font-style: oblique;color:gray;}
 
