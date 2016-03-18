@@ -1,0 +1,95 @@
+    body{margin:0px;padding:0px;background:gray; font:15px  "微软雅黑";}
+	header{ padding-bottom:10px;margin: 0px;background:#333333;height:80px;width:100%;}
+	header img{margin-top:20px; margin-left:50px; float:left;}
+	header ul { float:right;margin:right:5px;}
+
+	header ul li{float:left;padding-right:20px;margin-top:20px;}
+
+/*任务五新增*/	
+	#outer{padding:20px;}
+	#right{
+		float:right;
+		width:700px;
+		margin:0 30px;}
+	#right .side{
+		padding:20px;
+	}
+	#left{
+		overflow:auto;
+	}
+	#left article{
+		padding:30px;
+		margin-bottom:30px;}
+
+	#pic dd{
+		float:left;
+	}
+	#pic:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	#zj{
+		list-style-type:none;
+	}
+	
+	
+	/*导航栏*/
+	#nav li a {color:white;text-decoration: none;}
+	#nav li a:hover{color:gray;}
+	h3{color:gray;}
+	h5{font-style: oblique;color:gray;}
+
+	/*文章*/
+	article{
+		border-bottom:5px ridge rgb(222,222,222);
+		border-right:5px ridge rgb(222,222,222);
+
+		background:white;
+	}
+	p{text-indent: 2em;}
+	
+	/*图片*/
+	dl dd{
+		border:1px solid #ccc;
+		width:150px;
+		padding:5px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	dl dd p{ 
+		text-indent: 0em;
+		margin:5px 0;
+
+	}
+
+	/*表格*/
+	table{width:100%;background:#ccc;}
+	tbody td{background:#fff;}
+	thead{background:#333;color:#fff;}
+	tfoot{background:#ccc;}
+	tfoot td{font-weight: 800;}
+
+	/*侧栏*/
+	.side h2{padding:0 10px;border-left:solid 3px rgb(170,170,170);}
+	.side .form-a{margin:20px 0;}
+	.side .form-a textarea{width:200px;height:100px;}
+	.side .form-a label{width:30%; float:left;text-align:right;}
+	.side .form-b{margin-left:30%;font-size:14px;color:rgb(170,170,170);}
+	.side input[type="submit"]{
+		width:100%;
+		border:none;
+		border-radius: 5px;
+		padding:10px 20px;
+		color:white;
+		background:blue;
+	}
+
+	/*底部*/
+	footer{
+		text-align:center;
+		background:black;
+		height:100px;
+		color:white;
+		line-height: 100px;
+	}
