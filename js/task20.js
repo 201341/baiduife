@@ -116,12 +116,15 @@
 
 	function search(){
 	    btn=odiv.getElementsByTagName("div");
+	    for(var i=0;i<btn.length;i++){
+	    	btn[i].style.background="color";
+	    }
 		if(osearch.value!==""){
 			for(var i=0;i<btn.length;i++){
 				if(btn[i].innerHTML.indexOf(osearch.value)!=-1){
 					btn[i].style.background="blue";
 				}
-				
+
 			}
 		}
 	}
