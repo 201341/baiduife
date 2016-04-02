@@ -117,7 +117,7 @@
 	function search(){
 	    btn=odiv.getElementsByTagName("div");
 	    for(var i=0;i<btn.length;i++){
-	    	btn[i].style.background="color";
+	    	btn[i].style.background="red";
 	    }
 		if(osearch.value!==""){
 			for(var i=0;i<btn.length;i++){
