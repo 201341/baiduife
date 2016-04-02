@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta http-equiv="Content" charest="utf-8">
+<title>第二十次任务</title>
+<style>
+.option{
+	text-align: center;
+}
+.option textarea{
+	height:80px;
+}
+
+.omain{
+	width:90%;
+	height:800px;
+	margin:10px auto;
+	background-color: gray;
+}
+.omain div{
+	width:80px;
+	height:80px;
+	background-color: red;
+	text-align: center;
+	font:2px "微软雅黑";
+	color:white;
+	display:inline-block;
+	margin:5px;
+	word-wrap: break-word;
+}
+</style>
+</head>
+
+<body>
+<div class="option">
+<textarea name="input" id="inputtext" cols="40" row="5" placeholder="允许一次批量输入多个内容，格式可以为数字、中文、英文等，可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔 "></textarea>
+<input class="left-in" value="左侧入" type="button">
+<input class="right-in" value="右侧入" type="button">
+<input class="left-delete" value="左删除" type="button">
+<input class="right-delete" value="右删除" type="button">
+<input class="oinput" type="text">
+<input class="search" value="查询" type="button">
+</div>
+<div class="omain">
+
+</div>
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/task20.js"></script>
+</body>
+</html>
