@@ -19,6 +19,10 @@ function addhandler(element,type,handler){
 	}
 	return addhandler(element,type,handler);
 }
+
+
+
+
 /**
  * get target(event)
  */
@@ -27,6 +31,14 @@ function getTarget(event){
 	event=event||window.event;
 	return event.target||event.srcElement;
 }
+
+
+
+ 
+
+
+
+
 /**
  * prevent default
  */
@@ -50,4 +62,25 @@ function preventDefault(event){
 
 function $(selector) {
 	return document.querySelector(selector);
+}
+
+/**
+ * 去除空格
+ * @return {[type]} [description]
+ */
+function trim(str){  
+    return str.replace(/^\s+/, "").replace(/\s+$/, "");  
+} 
+
+
+/**
+ * 去重方法
+ */
+
+function unique(array){
+    var n = [];//临时数组
+    for(var i = 0;i < array.length; i++){
+        if(n.indexOf(array[i]) == -1) n.push(array[i]);
+    }
+    return n;
 }
