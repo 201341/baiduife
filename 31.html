@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>表单联动</title>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    #wrap{
+        height:100px;
+        width:400px;
+        margin:20% auto;
+
+    }
+    .choose{
+        text-align:center;
+        margin-bottom:50px;
+    }
+    .radio{
+        display:inline;
+        position:relative;
+        font-family:"微软雅黑";
+    }
+    .radio:first-child{
+        margin-right:110px;
+    }
+    input[type="radio"]{
+        border: 1px solid #999;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 3px;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .input-style{
+        position: absolute;
+        left: 5px;
+        top: 2px;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #c5c5c5;
+        border-radius: 50%;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    input:hover + span{
+        border: 6px solid #3496FE;
+        box-shadow: 0 0 3px #3496FE;
+    }
+    input:checked +span{
+        border: 6px solid #3496FE;
+        box-shadow: 0 0 3px #3496FE;
+    }
+    input[type="radio"]:before:hover{
+        box-shadow: 0 0 3px #3496FE;
+    }
+    #school label{
+        font-family:"微软雅黑";
+        text-align: left;
+        width:50px;
+        display:inline-block;
+        margin-right:50px;
+
+    }
+    #school select{
+        width:120px;
+        outline:none;
+        padding:5px;
+        border:1px solid gray;
+        border-radius:5px;
+        margin-right:20px;
+    }
+    #work label{
+        font-family: "微软雅黑";
+        width:100px;
+        text-align:left;
+        display: inline-block;
+        margin-right:20px;
+    }
+    #work input{
+        width:250px;
+        height:20px;
+        padding:5px;
+        outline:none;
+        border:1px solid gray;
+    }
+</style>
+</head>
+<body>
+<div id="wrap">
+<div class="choose">
+    <div class="radio">
+        <input type="radio" id="yes" value="school" checked>
+        <span class="input-style"></span>在校生
+    </div>
+    <div class="radio">
+        <input type="radio" id="no" value="noschool">
+        <span class="input-style"></span>非在校生
+    </div>
+</div>
+
+<div id="school" style="display:block">
+    <label>学校</label>
+    <select name="parent" id="parent">
+    </select>
+    <select name="child" id="child">
+        <option value="">请选择</option>
+    </select>
+</div>
+<div id="work" style="display:none;">
+<label>就业单位</label>
+<input type="text">
+</div>
+</div>
+<script src="js/task31.js"></script>
+</body>
+</html
