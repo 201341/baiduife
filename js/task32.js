@@ -5,43 +5,43 @@
 
 
 (function() {
-	var btns = $('button'),
-		prebtn = btns[0],
-		inbtn = btns[1],
-		backbtn = btns[2],
+	var prebtn = $('.pre'),
+		inbtn = $('.in'),
+		backbtn = $('.back'),
 		root = $('.root');
+	var stack=[];
+	var timer=null;
+	var divs=document.getElementsByTagName('div');
 	var Order = {
-		stack: [],
 		preOrder: function(node) {
-			this.stack.push(node);
+			stack.push(node);
 			if (node.firstElementChild != null) {
-				arguments.callee(node.fitstElementChild);
+				arguments.callee(node.firstElementChild);
 			}
 			if (node.lastElementChild != null) {
-				arguments.callee(node.firstElementChild);
+				arguments.callee(node.lastElementChild);
 			}
 		},
 
-			inOrder: function(node) {
+		inOrder: function(node) {
 			if (node.firstElementChild != null) {
 				arguments.callee(node.firstElementChild);
 			}
-			this.stack.push(node);
+			stack.push(node);
 			if (node.lastElementChild) {
-				arguments.callee(node.fitstElementChild);
+				arguments.callee(node.lastElementChild);
 			}
 		},
 		backOrder: function(node) {
-			if (node.fitstElementChild != null) {
+			if (node.firstElementChild != null) {
 				arguments.callee(node.firstElementChild);
 			}
 			if (node.lastElementChild != null) {
-				argumetns.callee(node.lastElementChild);
+				arguments.callee(node.lastElementChild);
 			}
-			this.stack.push(node);
+			stack.push(node);
 		},
 		animate: function() {
-			var timer;
 			var isworking = false;
 			var iter = 0;
 			if (!isworking) {
@@ -49,31 +49,44 @@
 				stack[iter].style.backgroundColor = "red";
 				timer = setInterval(function() {
 					if (iter === stack.length - 1) {
-						this.stack[iter].backgroundColor = "#fff";
+						stack[iter].style.backgroundColor = "#fff";
 						isworking = false;
 						clearInterval(timer);
 					} else {
 						iter++;
-						this.stack[iter - 1].backgroundColor = "#fff";
-						this.stack[iter].backgroundColor = "red";
+						stack[iter - 1].style.backgroundColor = "#fff";
+						stack[iter].style.backgroundColor = "red";
 					}
-				}, 1000);
+				}, 500);
+			}
+		},
+		reset:function(){
+			clearInterval(timer);
+
+			for(var i=divs.length-1;i>=0;i--){
+				divs[i].style.backgroundColor='#fff';
 			}
 		}
 	};
 
 
 	addhandler(prebtn, "click", function() {
+		stack=[];
+		Order.reset();
 		Order.preOrder(root);
 		Order.animate();
 	})
 	addhandler(inbtn, "click", function() {
+		stack=[];
+		Order.reset();
 		Order.inOrder(root);
 		Order.animate();
 	})
 
 	addhandler(backbtn, "click", function() {
+		stack=[];
+		Order.reset();
 		Order.backOrder(root);
-		Order.animate;
+		Order.animate();
 	})
-})
+})();
